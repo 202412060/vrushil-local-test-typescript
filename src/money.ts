@@ -6,5 +6,6 @@ export function roundCents(amount: number): number {
 }
 
 export function formatAmount(amount: number): string {
-  return `${roundCents(amount).toFixed(2)} ${CURRENCY}`;
+  const sign = amount < 0 ? "-" : "";
+  return `${sign}${CURRENCY} ${Math.abs(roundCents(amount)).toFixed(2)}`;
 }
