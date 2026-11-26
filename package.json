@@ -1,0 +1,8 @@
+{
+  "name": "vrushil-local-test-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Small billing module used to test CodeSherlock PR reviews.",
+  "scripts": { "build": "tsc" },
+  "devDependencies": { "typescript": "5.4.5" }
+}
