@@ -1,7 +1,7 @@
 import { roundCents } from "./money";
 
-// Percentage discount, capped so an invoice never goes below zero.
-export function applyDiscount(total: number, percent: number): number {
-  const bounded = Math.min(Math.max(percent, 0), 100);
-  return roundCents(total * (1 - bounded / 100));
+// Discount given as a rate (0.1 = 10%), capped so an invoice never goes below zero.
+export function applyDiscount(total: number, rate: number): number {
+  const bounded = Math.min(Math.max(rate, 0), 1);
+  return roundCents(total * (1 - bounded));
 }
